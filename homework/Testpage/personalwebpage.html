@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script>
+    function ShowTime() {
+      var NowDate = new Date();
+      var d = NowDate.getDay();
+      var dayname = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+      document.getElementById('showbox').innerHTML = '目前時間:' + NowDate.toLocaleString() + '（' + dayname[d] + '）';
+      setTimeout('ShowTime()', 1000);
+    }
+
+  </script>
+
+
+  <style>
+    body {
+      background-color: #63c3f0;
+      background-position: center;
+      background-size:auto;
+      background-image: url('backgroundImage.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .text {
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    td,th {
+      border: 1px solid #000000;
+      text-align: left;
+      padding: 8px;
+      font-family: Microsoft JhengHei;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align:center;">廖振鈞的網頁</h1>
+
+  <table>
+    <tr>
+      <th colspan="3" class="text">個人簡介</th>
+    </tr>
+    <tr>
+      <td width="120">目前就讀</td>
+      <td colspan="2"><a href="https://www.nqu.edu.tw/cht/index.php?" target="_blank">國立金門大學</a>、
+                      <a href="https://www.nqu.edu.tw/educsie/index.php?" target="_blank">資工系</a></td>
+    </tr>
+    <tr>
+      <td>興趣</td>
+      <td colspan="2">看電影、玩電玩、騎自行車</td>
+    </tr>
+    <tr>
+      <td>實習技能</td>
+      <td colspan="2">Linux、Arduino、Visual Studio Code</td>
+    </tr>
+    <tr>
+      <td>個性</td>
+      <td colspan="2">隨和、懶惰、有耐心、理性思考</td>
+    </tr>
+    <tr>
+      <td>未來想做的事</td>
+      <td colspan="2">到各地旅行、辦提早畢業</td>
+    </tr>
+    <tr>
+      <th colspan="3" class="text">
+        <body onload="ShowTime()">
+            <div id="showbox"></div>
+        </body>
+      </th>
+    </tr>
+  </table>
+
+</body>
+
+</html>
