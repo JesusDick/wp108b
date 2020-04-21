@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <style>
+        .Button {
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: Microsoft JhengHei;
+            position: relative;
+            top: 15px;
+            left: 45%;     
+        }
+
+        .Lin {
+            line-height: 30px;
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        select {
+            margin-right: 10%
+        }
+
+        h2,
+        p,
+        legend {
+            text-align: center
+        }
+
+        #P {
+            padding: 0px 10% 0px 0px;
+        }
+    </style>
+
+    <h2>廖振鈞的餐飲小館</h2>
+
+    <p>我們會根據您的喜好來調整您的餐點。</p>
+    <form action="目前不需要">
+        <fieldset class="Lin">
+            <legend>餐飲喜好調查:</legend>
+            <input type="radio" id="M" name="Meals" value="Rice">
+            <label for="rice" id="P">飯</label>
+            <input type="radio" id="M" name="Meals" value="Noodles">
+            <label for="Noodles" id="P">麵</label>
+            <input type="radio" id="M" name="Meals" value="Liquidfood">
+            <label for="rice" id="P">流質食物</label><br>
+            <input type="radio" id="F" name="flavor" value="Strong">
+            <label for="flavor" id="P">濃烈</label>
+            <input type="radio" id="F" name="flavor" value="Moderate">
+            <label for="flavor" id="P">適中</label>
+            <input type="radio" id="F" name="flavor" value="Light">
+            <label for="flavor" id="P">清淡</label><br>
+            <input type="radio" id="D" name="drink" value="Non-alcoholic">
+            <label for="drink">無酒精飲料:</label>
+            <select id="D" name="drink">
+                <option value="Pepsi">百事可樂</option>
+                <option value="Mountain Dew">激浪</option>
+                <option value="BlackTea">紅茶</option>
+                <option value="Orange juice">柳橙汁</option>
+            </select>
+            <input type="radio" id="D" name="drink" value="Alcoholic">
+            <label for="drink">酒精飲料:</label>
+            <select id="D" name="drink">
+                <option value="Heineken">海尼根</option>
+                <option value="TW-beer">台灣啤酒</option>
+                <option value="DarkBeer">德國黑麥啤酒</option>
+                <option value="Sake">清酒</option>
+            </select><br>
+            <input type="checkbox" id="admixture1" name="admixture1" value="shallot">
+            <label for="admixture1">蔥</label>
+            <select id="admixture1" name="admixture1">
+                <option value="considerable">爆多</option>
+                <option value="weight">多</option>
+                <option value="Middlevolume">適中</option>
+                <option value="Lessweight">量少</option>
+            </select>
+            <input type="checkbox" id="admixture2" name="admixture2" value="vegetables">
+            <label for="admixture2">蔬菜</label>
+            <select id="admixture2" name="admixture2">
+                <option value="considerable">爆多</option>
+                <option value="weight">多</option>
+                <option value="Middlevolume">適中</option>
+                <option value="Lessweight">量少</option>
+            </select>
+            <input type="checkbox" id="admixture3" name="admixture3" value="Garlic">
+            <label for="admixture3">蒜泥</label>
+            <select id="admixture3" name="admixture3">
+                <option value="considerable">爆多</option>
+                <option value="weight">多</option>
+                <option value="Middlevolume">適中</option>
+                <option value="Lessweight">量少</option>
+            </select><br>
+        </fieldset>
+        <input type="submit" class="Button" value="送出">
+    </form>
+</body>
+
+</html>
