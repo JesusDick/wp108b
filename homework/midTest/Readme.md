@@ -1,0 +1,111 @@
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="topsidenav.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="mySidenav" class="sidenav">
+            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+            <button type="button" onclick="Test1()">創始理念</button>
+            <button type="button" onclick="Test2()">餐廳設計</button>
+            <button type="button" onclick="Test3()">旗下餐廳</button>
+            <button type="button" onclick="Test4()">回饋與建議</button>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active" onclick="openNav()">&#9776; 介紹</button>
+            <a href="midTest3.html">開胃菜</a>
+            <a href="midTest4.html">主餐</a>
+            <a href="midTest5.html">甜點</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            </a>
+        </div>
+        <div style="padding-left:16px " id="Test" >
+            <h2 style="text-align: center;">歡迎來到廖振鈞餐廳</h2>
+            <p style="text-align: center;">請使用上方按鈕悅目你想點的餐點</p>
+        </div>
+    </div>
+    <script>
+        function appetizer() {
+            var sourceOfPicture = "appetizer.jpg";
+            var img = document.getElementById('imge')
+            img.src = sourceOfPicture.replace();
+            img.style.display = "block";
+            img.style.blockSize = "500px"
+        } 
+    </script>
+    <script>
+        function maincourse() {
+            var sourceOfPicture = "maincourse.jpg";
+            var img = document.getElementById('imge')
+            img.src = sourceOfPicture.replace();
+            img.style.display = "block";
+            img.style.blockSize = "500px"
+        } 
+    </script>
+    <script>
+        function dessert() {
+            var sourceOfPicture = "dessert.jpg";
+            var img = document.getElementById('imge')
+            img.src = sourceOfPicture.replace();
+            img.style.display = "block";
+            img.style.blockSize = "500px"
+        } 
+    </script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <script>
+        function Test1() {
+            document.getElementById("Test").innerHTML = "<h1>創始於2020年</h1><p>本店宗旨為了讓更多人品嚐到各國美食，<br>但又深怕覺得太貴而退而遠之所以才創立此店</p>"
+            document.getElementById("Test").style.fontSize = "160%"
+            document.getElementById("Test").style.fontFamily = "Microsoft JhengHei";
+        }
+        function Test2() {
+            document.getElementById("Test").innerHTML = "<p>本餐廳採用的設計為開放式廚房設計，<br>既看得到廚師們的高超廚藝也聞得到飄香而來的香味<br>可以說是視覺與味覺上的雙重享受</p>"
+            document.getElementById("Test").style.fontSize = "160%"
+            document.getElementById("Test").style.fontFamily = "Microsoft JhengHei";
+
+        }
+        function Test3() {
+            document.getElementById("Test").innerHTML = "<p>此店為目前全台唯一旗艦店<br>加盟電話:0901234567<br><br><br><br><br><br><br>本店在台灣沒有其他店面了QQ</p>"
+            document.getElementById("Test").style.fontSize = "160%"
+            document.getElementById("Test").style.fontFamily = "Microsoft JhengHei";
+        }
+        function Test4() {
+            document.getElementById("Test").innerHTML = "<h2>如果對本店有任何需待改善的地方可以打在這</h2><textarea rows='10' cols='50'>Enter text here...</textarea><br><input type='submit'>"
+            document.getElementById("Test").inputMode = "type=submit"
+            document.getElementById("Test").style.fontFamily = "Microsoft JhengHei";
+
+        }
+    </script>
+</body>
+</html>
+```
