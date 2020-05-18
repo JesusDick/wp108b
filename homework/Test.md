@@ -26,5 +26,3 @@
   3. 二十一
 
 [我的表單](https://github.com/JesusDick/wp108b/tree/master/homework/PersonalForms)
-
-![測試](Test.png "Gon")
