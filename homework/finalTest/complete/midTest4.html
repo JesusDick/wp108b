@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="topsidenav.css">
+    <link rel="stylesheet" href="chatstyle.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="mySidenav" class="sidenav">
+            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+            <button type="button" onclick="Test1()">創始理念</button>
+            <button type="button" onclick="Test2()">餐廳設計</button>
+            <button type="button" onclick="Test3()">旗下餐廳</button>
+            <button type="button" onclick="Test4()">回饋與建議</button>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active" onclick="openNav()">&#9776; 介紹</button>
+                <a href="midTest3.html">開胃菜</a>
+                <a href="#home">主餐</a>
+                <a href="midTest5.html">甜點</a>
+                <a href="index.html">營收狀況</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                </a>
+        </div>
+        <div style="padding-left:16px" id="Test">
+            <h2 style="text-align: center;">歡迎來到廖振鈞餐廳</h2>
+            <p style="text-align: center;">請使用上方按鈕悅目你想點的餐點</p>
+            <table>
+                <tr>
+                    <th colspan="2">主菜</th>
+                </tr>
+                <tr>
+                    <td>羊排</td>
+                    <td>西班牙燉飯</td>
+                </tr>
+                <tr>
+                    <td><img src="Lamb Chops.jpg" alt="羊排顯示錯誤" width="95%">($200)</td>
+                    <td><img src="TomatoRisotto.jpg" alt="西班牙燉飯顯示錯誤" width="95%">($130)</td>
+                </tr>
+                <tr>
+                    <td>牛排</td>
+                    <td>烤雞</td>
+                </tr>
+                <tr>
+                    <td><img src="beef.jpeg" alt="牛排顯示錯誤" width="95%">($240)</td>
+                    <td><img src="roast chicken.jpg" alt="烤雞顯示錯誤" width="95%">($320)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">肉丸義大利麵</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><img src="spaghetti meatballs.jpg" alt="肉丸義大利麵顯示錯誤" width="95%">($160)</td>
+                </tr>
+            </table>
+        </div>
+        <button class="open-button" onclick="openForm()"><img src="send.png" width="56" height="56"></button>
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>ZJN</h1>
+                <p>可以跟店家溝通，店家會即時做回覆</p>
+                <div class="chat_show" id="words">
+                    <div style="margin:10px" class="gtalk"><span id="gsay">客人說：不加蒜頭</span></div>
+                    <div class="ctalk"><span id="csay">員工說：好的</span></div>
+                </div>
+                <label for="msg"><img src="hotel.png" width="40" height="30"></label>
+                <input type="text" class="chat_word" id="talkwords" placeholder="輸入文字">
+
+                <button type="submit" class="chat_sub">傳送</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">關閉</button>
+            </form>
+        </div>
+    </div>
+    <script>src="side.js"</script>
+    <script>src="top.js"</script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

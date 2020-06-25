@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 120px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+
+        .sidebar button {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+
+        .sidebar button.active {
+            background-color: #4CAF50;
+            color: white;
+            width: 120px;
+        }
+
+        .sidebar button.side {
+            color: black;
+            width: 120px;
+        }
+
+
+        .sidebar button:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .sidebar button:hover:not(.side) {
+            background-color: #61510b;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar button {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar button {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <button class="active" onclick="openLink(event, 'Home')">Home</button>
+        <button class="side" onclick="openLink(event, 'News')">News</button>
+        <button class="side" onclick="openLink(event, 'Fade')">Fade</button>
+        <button class="side" onclick="openLink(event, 'Contact')">Contact</button>
+        <button class="side" onclick="openLink(event, 'About')">About</button>
+    </div>
+
+    <div class="content">
+        <div id="Home" class="1" style="display:none">
+            <h2>Fade in</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="News" class="1" style="display:none">
+            <h2>Fade in</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="Fade" class="1" style="display:none">
+            <h2>Fade in</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="Contact" class="1" style="display:none">
+            <h2>Fade in</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        <div id="About" class="1" style="display:none">
+            <h2>Fade in</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+    </div>
+
+    <script>
+        function openLink(evt, animName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(animName).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+    </script>
+
+</body>
+
+</html>

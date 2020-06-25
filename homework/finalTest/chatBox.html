@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+      background-color: inherit;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+    }
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+
+    .ctalk {
+      margin: 10px;
+      text-align: right;
+    }
+
+    .chat_show {
+      width: auto;
+      height: 300px;
+      border: 1px solid #666;
+      background: #fff;
+      margin-bottom: 10px;
+      overflow: auto;
+    }
+
+    .chat_sub {
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background-color: #4CAF50;
+      width: 50px;
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    .chat_word {
+      width: 210px;
+      height: 30px;
+      padding: 0px;
+      margin-left: 10px;
+      outline: none;
+      text-indent: 10px;
+    }
+
+    .gtalk span {
+      display: inline-block;
+      background: #18bcfd;
+      border-radius: 10px;
+      color: #fff;
+      padding: 5px 10px;
+    }
+
+    .ctalk span {
+      display: inline-block;
+      background: #5bee22;
+      border-radius: 10px;
+      color: #fff;
+      padding: 5px 10px;
+    }
+
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 350px;
+      padding: 10px;
+      background-color: white;
+    }
+
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+      border-radius: 10px;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover,
+    .open-button:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Popup Chat Window</h2>
+  <p>Click on the button at the bottom of this page to open the chat form.</p>
+  <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.
+  </p>
+
+  <button class="open-button" onclick="openForm()"><img src="send.png" width="56" height="56"></button>
+
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>ZJN</h1>
+      <p>可以跟店家溝通，店家會即時做回覆</p>
+      <div class="chat_show" id="words">
+        <div style="margin:10px" class="gtalk"><span id="gsay">客人說：不加蒜頭</span></div>
+        <div class="ctalk"><span id="csay">員工說：好的</span></div>
+      </div>
+      <label for="msg"><img src="hotel.png" width="40" height="30"></label>
+      <input type="text" class="chat_word" id="talkwords" placeholder="輸入文字">
+
+      <button type="submit" class="chat_sub">傳送</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">關閉</button>
+    </form>
+  </div>
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

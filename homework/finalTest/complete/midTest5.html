@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="topsidenav.css">
+    <link rel="stylesheet" href="chatstyle.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="mySidenav" class="sidenav">
+            <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+            <button type="button" onclick="Test1()">創始理念</button>
+            <button type="button" onclick="Test2()">餐廳設計</button>
+            <button type="button" onclick="Test3()">旗下餐廳</button>
+            <button type="button" onclick="Test4()">回饋與建議</button>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active" onclick="openNav()">&#9776; 介紹</button>
+                <a href="midTest3.html">開胃菜</a>
+                <a href="midTest4.html">主餐</a>
+                <a href="#home">甜點</a>
+                <a href="index.html">營收狀況</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                </a>
+        </div>
+        <div style="padding-left:16px" id="Test">
+            <h2 style="text-align: center;">歡迎來到廖振鈞餐廳</h2>
+            <p style="text-align: center;">請使用上方按鈕悅目你想點的餐點</p>
+            <table>
+                <tr>
+                    <th colspan="2">甜點</th>
+                </tr>
+                <tr>
+                    <td>馬卡龍</td>
+                    <td>布朗尼</td>
+                </tr>
+                <tr>
+                    <td><img src="macaron.jpg" alt="馬卡龍顯示錯誤" width="95%">($360)</td>
+                    <td><img src="Brownies.jpg" alt="布朗尼顯示錯誤" width="95%">($160)</td>
+                </tr>
+                <tr>
+                    <td>蘋果派</td>
+                    <td>草莓奶昔</td>
+                </tr>
+                <tr>
+                    <td><img src="applepie.jpg" alt="蘋果派顯示錯誤" width="95%">($100)</td>
+                    <td><img src="Strawberrymilkshake.jpg" alt="草莓奶昔顯示錯誤" width="95%">($60)</td>
+                </tr>
+                <tr>
+                    <td>水果拼盤</td>
+                    <td>草莓蛋糕</td>
+                </tr>
+                <tr>
+                    <td><img src="FruitPlatter.jpg" alt="水果拼盤顯示錯誤" width="95%">($120)</td>
+                    <td><img src="strawberrycake.jpg" alt="草莓蛋糕顯示錯誤" width="95%">($60)</td>
+                </tr>
+            </table>
+        </div>
+        <button class="open-button" onclick="openForm()"><img src="send.png" width="56" height="56"></button>
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>ZJN</h1>
+                <p>可以跟店家溝通，店家會即時做回覆</p>
+                <div class="chat_show" id="words">
+                    <div style="margin:10px" class="gtalk"><span id="gsay">客人說：不加蒜頭</span></div>
+                    <div class="ctalk"><span id="csay">員工說：好的</span></div>
+                </div>
+                <label for="msg"><img src="hotel.png" width="40" height="30"></label>
+                <input type="text" class="chat_word" id="talkwords" placeholder="輸入文字">
+
+                <button type="submit" class="chat_sub">傳送</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">關閉</button>
+            </form>
+        </div>
+    </div>
+    <script>src="side.js"</script>
+    <script>src="top.js"</script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
